@@ -38,4 +38,4 @@ To use a Dockerfile from this collection:
 
 ## Available Dockerfiles
 
-*   **jenkins-flutter:** Creates a Jenkins agent node equipped with the necessary Flutter and Android SDKs for building Flutter applications. See the `jenkins-flutter/README.md` for more details. 
+*   **[jenkins-flutter](./jenkins/flutter/):** Creates a Jenkins agent node equipped with the necessary Flutter and Android SDKs for building Flutter applications.
