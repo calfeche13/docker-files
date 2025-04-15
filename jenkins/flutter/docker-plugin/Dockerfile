@@ -38,8 +38,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-${JAVA_VERSION}-jdk \
     ruby-full \
     build-essential \
- # Clean up apt cache
- && apt-get clean && rm -rf /var/lib/apt/lists/*
+    # Clean up apt cache
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # --- Install Android SDK Command-line Tools ---
 # Download using the provided URL ARG
@@ -48,9 +48,9 @@ RUN mkdir -p $ANDROID_HOME/cmdline-tools && \
     unzip -q cmdline-tools.zip -d $ANDROID_HOME/cmdline-tools && \
     # The tools might unzip into a directory named 'cmdline-tools'. Rename/move it to 'latest'.
     if [ -d "$ANDROID_HOME/cmdline-tools/cmdline-tools" ]; then \
-      mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest; \
+    mv $ANDROID_HOME/cmdline-tools/cmdline-tools $ANDROID_HOME/cmdline-tools/latest; \
     else \
-      echo "Warning: Expected 'cmdline-tools' directory not found after unzip. Assuming structure is already correct or needs manual adjustment."; \
+    echo "Warning: Expected 'cmdline-tools' directory not found after unzip. Assuming structure is already correct or needs manual adjustment."; \
     fi && \
     rm cmdline-tools.zip
 
